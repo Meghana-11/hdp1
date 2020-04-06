@@ -1,0 +1,30 @@
+{
+  "blueprint": "hdpcluster",
+  "default_password": "hadoop",
+  "host_groups": [
+    {
+      "name": "host1",
+      "hosts": [
+        {
+          "fqdn": "ubuntu-1"
+        }
+      ]
+    },
+    {
+      "name": "host2",
+      "hosts": [
+        {
+          "fqdn": "ubuntu-2"
+        }
+      ]
+    },
+    {
+      "name": "host3",
+      "hosts": [
+        {
+          "fqdn": "ubuntu-3"
+        }
+      ]
+    }
+  ]
+}

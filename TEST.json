@@ -1,0 +1,55 @@
+{
+	"configurations": [],
+	"host_groups": [
+                {
+		"name": "host1",
+		"components": [  
+                        { "name" : "NODEMANAGER" },
+                        { "name" : "DATANODE" },
+                        { "name" : "ZOOKEEPER_SERVER" },
+	                {"name": "APP_TIMELINE_SERVER"},
+                        { "name" : "JOURNALNODE" },
+                         { "name" : "MAPREDUCE2_CLIENT" },
+                        { "name" : "YARN_CLIENT" },
+                        { "name" : "HDFS_CLIENT" },
+                        { "name" : "ZOOKEEPER_CLIENT" },
+                        { "name" : "NAMENODE" }
+                ],
+		"cardinality": "1"
+                }, 
+                {
+		"name": "host2",
+		"components": [
+                        { "name" : "NODEMANAGER" },
+                        { "name" : "DATANODE" },
+                        { "name" : "ZOOKEEPER_SERVER" },
+                        { "name" : "JOURNALNODE" },
+                        {"name" : "SECONDARY_NAMENODE"},      
+                        { "name" : "MAPREDUCE2_CLIENT" },
+                        { "name" : "YARN_CLIENT" },
+                        { "name" : "HDFS_CLIENT" },
+                        { "name" : "ZOOKEEPER_CLIENT" }
+                ],
+ 		"cardinality": "1"
+	        }, {
+		"name": "host3",
+		"components": [ 
+                        { "name" : "NODEMANAGER" },
+                        { "name" : "DATANODE" },
+                        { "name" : "ZOOKEEPER_SERVER" },
+                        {"name": "RESOURCEMANAGER"},
+                        { "name" : "JOURNALNODE" },
+                        { "name" : "MAPREDUCE2_CLIENT" },
+                        { "name" : "YARN_CLIENT" },
+                        { "name" : "HDFS_CLIENT" },
+                        { "name" : "ZOOKEEPER_CLIENT" }
+                ],
+		"cardinality": "1"
+	        }],
+	        "Blueprints": {
+		"blueprint_name": "hdpcluster",
+		"stack_name": "HDP",
+		"stack_version": "2.6"
+	}
+}
+

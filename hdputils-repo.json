@@ -1,0 +1,8 @@
+ 
+{
+    "Repositories" : {
+      "base_url" : "http://ubuntu-1/HDP-UTILS/ubuntu16/1.1.0.22/",
+      "verify_base_url" : true,
+      "repo_name": "HDP-UTILS"
+    }
+}

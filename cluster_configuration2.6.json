@@ -1,0 +1,80 @@
+{
+  "configurations": [
+    {
+      "hdfs-site": {
+        "properties": {
+          "dfs.namenode.name.dir": "/data/hdptest/namenode",
+          "dfs.datanode.data.dir": "/hdptest/data01/data,/hdptest/data02/data,/hdptest/data03/data"
+        }
+      }
+    }
+  ],
+  "host_groups": [
+    {
+      "name": "host1",
+      "components": [
+        { "name": "NODEMANAGER" },
+        { "name": "DATANODE" },
+        { "name": "ZOOKEEPER_SERVER" },
+        { "name": "APP_TIMELINE_SERVER" },
+        { "name": "MAPREDUCE2_CLIENT" },
+        { "name": "YARN_CLIENT" },
+        { "name": "HDFS_CLIENT" },
+        { "name": "ZOOKEEPER_CLIENT" },
+        { "name": "NAMENODE" },
+        { "name": "HISTORYSERVER" },
+        {
+          "name": "HBASE_CLIENT"
+        },
+        {
+          "name": "HBASE_MASTER"
+        },
+        { "name": "HBASE_REGIONSERVER" }
+      ],
+      "cardinality": "1"
+    },
+    {
+      "name": "host2",
+      "components": [
+        { "name": "NODEMANAGER" },
+        { "name": "DATANODE" },
+        { "name": "ZOOKEEPER_SERVER" },
+        { "name": "SECONDARY_NAMENODE" },
+        { "name": "MAPREDUCE2_CLIENT" },
+        { "name": "YARN_CLIENT" },
+        { "name": "HDFS_CLIENT" },
+        { "name": "ZOOKEEPER_CLIENT" },
+        {
+          "name": "HBASE_CLIENT"
+        },
+        {
+          "name": "HBASE_MASTER"
+        },
+        { "name": "HBASE_REGIONSERVER" }
+      ],
+      "cardinality": "1"
+    },
+    {
+      "name": "host3",
+      "components": [
+        { "name": "NODEMANAGER" },
+        { "name": "DATANODE" },
+        { "name": "ZOOKEEPER_SERVER" },
+        { "name": "RESOURCEMANAGER" },
+        { "name": "MAPREDUCE2_CLIENT" },
+        { "name": "YARN_CLIENT" },
+        { "name": "HDFS_CLIENT" },
+        { "name": "ZOOKEEPER_CLIENT" },
+        {
+          "name": "HBASE_CLIENT"
+        }
+      ],
+      "cardinality": "1"
+    }
+  ],
+  "Blueprints": {
+    "blueprint_name": "hdpcluster",
+    "stack_name": "HDP",
+    "stack_version": "2.6"
+  }
+}

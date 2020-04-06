@@ -1,0 +1,7 @@
+{
+  "Repositories": {
+    "base_url": "http://<ambari-server-fqdn>/HDP/ubuntu16/3.1.0.0-78",
+    "verify_base_url": true,
+    "repo_name": "HDP"
+  }
+}

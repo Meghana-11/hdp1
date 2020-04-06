@@ -1,0 +1,18 @@
+{
+  "ambari_server_host": "ubuntu-1",
+  "ambari_server_host_ip": "10.0.2.12",
+  "ambari_agent_1": "ubuntu-1",
+  "ambari_agent_1_ip": "10.0.2.12",
+  "ambari_agent_2": "ubuntu-2",
+  "ambari_agent_2_ip": "10.0.2.13",
+  "ambari_agent_3": "ubuntu-3",
+  "ambari_agent_3_ip": "10.0.2.14",
+  "hdp_version": "2.6",
+  "namenode_directories": ["/data/hdptest/namenode"],
+  "datanode_directories": [
+    "/hdptest/data01/data",
+    "/hdptest/data02/data",
+    "/hdptest/data03/data"
+  ],
+  "cluster_name": "hdpcluster"
+}
